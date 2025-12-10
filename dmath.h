@@ -11,4 +11,14 @@ int i_sqrt(int a)
         return x;
 }
 
+int i_midl(int c, int a[])
+{
+	int m = 0;
+	for (int i = 0; i < c; i++) {
+		m = m + a[i];
+	}
+	m = m / c;
+	return m;
+}
+
 #endif

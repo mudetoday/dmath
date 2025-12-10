@@ -4,11 +4,15 @@
 
 int a;
 ivec_t v;
+int b[5];
 
 int main()
 {
 	a = 1;
 	v = ivec_make(1, 2, 3);
+	for (int i = 0; i < 5; i++) {
+		b[i] = i + 1;
+	}
 	for (int i = 0; i < 10; i++) {
 		a = a * 2;
 		printf("Square root for a = %d is %d\n", a, i_sqrt(a));
@@ -16,6 +20,9 @@ int main()
 
 	a = ivec_len(v);
 	printf("Length of vector V(1, 2, 3) is %d\n", a);
+
+	a = i_midl(5, b);
+	printf("Middle from 1..5 is %d\n", a);
 
 	return 0;
 }
